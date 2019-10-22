@@ -1,0 +1,15 @@
+{
+  "name": "mytestapp",
+  "version": "1.0.0",
+  "description": "this about learn package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "Npm"
+  ],
+  "author": "NareshIt",
+  "license": "ISC"
+}

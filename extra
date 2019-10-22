@@ -1,0 +1,67 @@
+npm / package.json
+Basic of NodeJs
+Express
+Static with NodeJs
+Intergate Template Engine(EJS)
+MongoDB
+Api with MongoDB
+Calling third party Api
+Emailwith Node(send gird)
+OO_NodeJS
+DasHboard(crud)
+JWT(login/logout)
+GraphQL
+ChatApp
+Redis
+Testing
+Deplyment with nginx
+Deplyment with docker
+Github
+
+/**********
+    json
+*********/
+[
+    {
+        name:"john",
+        class:"UI"
+    },
+    {
+        name:"Eva",
+        class:"Node"
+    }
+]
+/**********
+  prerequiste
+*********/
+Text Editor: https://code.visualstudio.com/
+NodeJs: https://nodejs.org/en/
+https://github.com/
+ https://github.com/Aakashdeveloper 
+
+/**********
+  Package.json
+*********/
+> Entry Point
+> Version
+> Description
+> Packages
+
+
+/**********
+  step to create Package.json
+*********/
+> Open terminal/cmd
+> Navigate to folder
+> npm init
+> Answer all question
+    package name: (learnpackage) mytestapp
+    version: (1.0.0) 
+    description: this about learn package
+    entry point: (index.js) 
+    test command: 
+    git repository: 
+    keywords: Node Npm
+    author: NareshIt
+    license: (ISC) 
+> type 'yes'
