@@ -11,5 +11,13 @@
     "Npm"
   ],
   "author": "NareshIt",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "zone.js": "^0.10.2"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
 }

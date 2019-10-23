@@ -65,3 +65,45 @@ https://github.com/
     author: NareshIt
     license: (ISC) 
 > type 'yes'
+
+
+/**********
+  Step to install package
+*********/
+
+Local package => Max package will install localy
+Global Package=> Build, Test , Make Starter file
+
+//Local Package////
+
+> Open terminal/cmd
+> Navigate to folder
+> npm install zone.js / npm i zone.js / npm install zone.js --save
+> npm i mocha --save-dev
+
+//Global Package////
+#Windows
+> Run cmd as Admin
+> npm -g install nodemon
+
+#Mac/Linux
+> Open Termional
+> sudo npm -g install nodemon
+
+
+/**********
+  Step Node app
+*********/
+> Install Global
+> npm i -g @aakashdeveloper/create-node-app
+> Go inside the folder
+> generate
+> project name: nodeapp
+> cd nodeapp
+> npm start
+> Open Browser and type: localhost:7600
+
+
+//////////\\\\\\\\\\
+Node inbuilt package
+\\\\\\\\\\//////////
