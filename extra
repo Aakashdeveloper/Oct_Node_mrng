@@ -107,3 +107,9 @@ Global Package=> Build, Test , Make Starter file
 //////////\\\\\\\\\\
 Node inbuilt package
 \\\\\\\\\\//////////
+
+
+//To Execute start script
+> npm start
+
+//To Execute all other script
