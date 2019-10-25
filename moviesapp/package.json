@@ -1,0 +1,19 @@
+{
+  "name": "moviesapp",
+  "version": "1.0.0",
+  "description": "this is full stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "eejs"
+  ],
+  "author": "nareshit",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
