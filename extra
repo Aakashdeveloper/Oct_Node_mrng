@@ -91,25 +91,62 @@ Global Package=> Build, Test , Make Starter file
 > sudo npm -g install nodemon
 
 
-/**********
-  Step Node app
+**********
+  step to create Package.json
 *********/
-> Install Global
+> Open terminal/cmd
+> Navigate to folder
+> npm init
+> Answer all question
+    package name: (learnpackage) mytestapp
+    version: (1.0.0) 
+    description: this about learn package
+    entry point: (index.js) 
+    test command: 
+    git repository: 
+    keywords: Node Npm
+    author: NareshIt
+    license: (ISC) 
+> type 'yes'
+
+
+/**********
+  Step to install package
+*********/
+
+Local package => Max package will install localy
+Global Package=> Build, Test , Make Starter file
+
+//Local Package////
+
+> Open terminal/cmd
+> Navigate to folder
+> npm install zone.js / npm i zone.js / npm install zone.js --save
+> npm i mocha --save-dev
+
+//Global Package////
+#Windows
+> Run cmd as Admin
+> npm -g install nodemon
+
+#Mac/Linux
+> Open Termional
+> sudo npm -g install nodemon
+
+
+Dev     Test     Prod
+7800    7900     7900
+
+
+
+npm i -g nodemon
+
+/**********
+Setup Node App
+**********/
+
 > npm i -g @aakashdeveloper/create-node-app
-> Go inside the folder
+
+> Open terminal/cmd
+> Navigate to folder
 > generate
-> project name: nodeapp
-> cd nodeapp
-> npm start
-> Open Browser and type: localhost:7600
-
-
-//////////\\\\\\\\\\
-Node inbuilt package
-\\\\\\\\\\//////////
-
-
-//To Execute start script
-> npm start
-
-//To Execute all other script

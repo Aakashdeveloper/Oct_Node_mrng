@@ -1,16 +1,18 @@
 var fs = require('fs');
+var os = require('os');
 
-fs.appendFile('mytext.txt', 'This is form nodemon \n', function(err,data){
-    if(err) throw err;
-    console.log('Data added')
-})
-
-/*fs.writeFile('mytext.txt', 'This is form nodemon', function(err,data){
+/*fs.writeFile('mytext.txt','This from application',function(err){
     if(err) throw err;
     console.log('Data added')
 })*/
 
-fs.readFile('mytext.txt', 'utf-8', function(err,data){
+var a = 'This is '+os.platform + '\n'
+fs.appendFile('mytext.txt', a ,function(err){
     if(err) throw err;
+    console.log('Data added')
+})
+
+fs.readFile('mytext.txt','utf-8',function(err,data){
+    if(err) throw err
     console.log(data)
 })

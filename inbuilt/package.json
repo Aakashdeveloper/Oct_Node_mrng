@@ -1,16 +1,16 @@
 {
   "name": "inbuilt",
   "version": "1.0.0",
-  "description": "this is for server",
+  "description": "this is node app",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "dev":"nodemon app.js",
-    "aaksh":"node test.js"
+    "start": "node app.js",
+    "dev":"nodemon server.js",
+    "nareshit":""
   },
   "keywords": [
     "node"
   ],
-  "author": "nareshitt",
+  "author": "nareshit",
   "license": "ISC"
 }
