@@ -150,3 +150,23 @@ Setup Node App
 > Open terminal/cmd
 > Navigate to folder
 > generate
+
+
+
+var a = 10
+var b = "my age is "+a > my age is 10
+var c = `my age is ${a}` > my age is 10
+
+
+///////////
+function add(a,b){
+  return a+b
+}
+
+add(1,2)
+
+var add = (a,b) => {return a+b}
+
+//// Temaplte engine///////
+EJS
+npm i ejs morgan chalk
