@@ -170,3 +170,7 @@ var add = (a,b) => {return a+b}
 //// Temaplte engine///////
 EJS
 npm i ejs morgan chalk
+
+
+
+C:\db\data
