@@ -304,3 +304,6 @@ db.movies.update({name:"A-Team"},
 
  db.movies.count()
  db.movies.findOne()
+
+
+ npm init --yes
