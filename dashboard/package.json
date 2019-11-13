@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node start.js",
+    "dev": "nodemon start.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,10 @@
     "ejs": "^2.7.1",
     "express": "^4.17.1",
     "mongodb": "^3.3.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0"
   }
 }

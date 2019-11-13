@@ -8,6 +8,10 @@ const mongourl = "mongodb://127.0.0.1:27017/";
 let db;
 const col_name = 'user_list'
 
+app.use(express.static(__dirname+'/public'));
+app.set('views','./src/views');
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 
@@ -20,10 +24,20 @@ app.get('/user',(req,res) => {
         if(err){
             res.status(401).send('No Data found')
         } else {
-            res.status(200).send(result)
+            res.status(200).render('index',{data:result})
         }
     })
 })
+
+app.post('/find_by_id',(req,res) => {
+    db.collection(col_name).find({"name":req.body.name}).toArray((err,result)=>{
+        if(err){
+            res.status(401).send('No Data inserted')
+        }else{
+            res.status(200).send(result)
+        }
+    })
+});
 
 app.post('/adduser',(req,res) => {
     console.log(req.body)

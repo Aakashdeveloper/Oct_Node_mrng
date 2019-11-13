@@ -307,3 +307,5 @@ db.movies.update({name:"A-Team"},
 
 
  npm init --yes
+
+ npm i @babel/preset-env @babel/register --save-dev
