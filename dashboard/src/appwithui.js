@@ -45,7 +45,7 @@ app.post('/adduser',(req,res) => {
         if(err){
             res.status(401).send('No Data inserted')
         }else{
-            res.status(200).send('Data Added Succesfully')
+            res.redirect('/user')
         }
     })
 });
@@ -80,6 +80,10 @@ app.delete('/deleteuser',(req,res) => {
     })
 })
 
+app.get('/add',(req,res)=>{
+    var id = Math.floor(Math.random()*100)
+    res.render('addUser',{id: id})
+})
 MongoClient.connect(mongourl,(err,client) => {
     if(err) throw err;
     db = client.db('classTest');
