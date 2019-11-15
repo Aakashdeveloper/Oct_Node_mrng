@@ -309,3 +309,11 @@ db.movies.update({name:"A-Team"},
  npm init --yes
 
  npm i @babel/preset-env @babel/register --save-dev
+
+
+///////////////////////
+=> redis-server
+=> redis-cli 
+=> KEYS *
+=> get 'keyname'
+=> set key value

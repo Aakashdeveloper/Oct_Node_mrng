@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = 7600;
+var port = 7600 || process.env.port;
 var morgan = require('morgan');
 var chalk = require('chalk');
 

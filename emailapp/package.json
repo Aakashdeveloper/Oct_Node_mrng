@@ -1,0 +1,18 @@
+{
+  "name": "emailapp",
+  "version": "1.0.0",
+  "description": "this is for email",
+  "main": "index.js",
+  "scripts": {
+    "start":"node app.js"
+  },
+  "keywords": [
+    "Email",
+    "Node"
+  ],
+  "author": "NareshIt",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0"
+  }
+}
