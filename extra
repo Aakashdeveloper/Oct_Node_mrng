@@ -317,3 +317,10 @@ db.movies.update({name:"A-Team"},
 => KEYS *
 => get 'keyname'
 => set key value
+
+
+npm i axios redis
+
+sudo mongod --dbpath /System/Volumes/Data/data/db
+
+ npm i express body-parser jssonwebtoken bcryptjs mongoose  node-localstorage

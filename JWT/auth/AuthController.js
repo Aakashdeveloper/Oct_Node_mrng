@@ -1,0 +1,53 @@
+const express = require('express');
+var router = express.Router();
+const LocalStorage = require('node-localstorage').LocalStorage;
+localStorage = new LocalStorage('./scratch');
+const bodyParser = require('body-parser');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const config = require('../config');
+
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
+var User = require('../user/User');
+
+router.post('/register', function(req, res) {
+  
+    var hashedPassword = bcrypt.hashSync(req.body.password, 8);
+    
+    User.create({
+      name : req.body.name,
+      email : req.body.email,
+      password : hashedPassword,
+      role:req.body.role?req.body.role:'user'
+    },
+    function (err, user) {
+      if (err) return res.status(500).send("There was a problem registering the user.")
+      // create a token
+      res.send('userRegistered')
+    }); 
+  });
+
+router.post('/login',(req,res) => {
+    User.findOne({email:req.body.email},(err,user) => {
+        if(err) return ress.status(500).send('Error on server')
+        if(!user){ res.send('Not Registered user')}
+        else{
+            const passwordIsValid = bcrypt.compareSync(req.body.password, user.password)
+            if(!passwordIsValid) return res.status(401).send({auth:false,token:null})
+            var token = jwt.sign({id:user._id},config.secret,{
+                expiresIn:86400
+            })
+            res.status(200).send({auth:true,token:token})
+        }
+    })
+})
+
+router.get('/user',(req,res)=>{
+    User.find({},(err,data)=>{
+        if(err) throw err;
+        res.send(data)
+    })
+})
+
+module.exports = router;
