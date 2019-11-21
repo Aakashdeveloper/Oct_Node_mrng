@@ -24,13 +24,15 @@ router.post('/register', function(req, res) {
     function (err, user) {
       if (err) return res.status(500).send("There was a problem registering the user.")
       // create a token
-      res.send('userRegistered')
+      //res.send('userRegistered')
+      var stri = encodeURIComponent('Successfully register pleae login now')
+      res.redirect('/signin?msg='+stri)
     }); 
   });
 
 router.post('/login',(req,res) => {
     User.findOne({email:req.body.email},(err,user) => {
-        if(err) return ress.status(500).send('Error on server')
+        if(err) return res.status(500).send('Error on server')
         if(!user){ res.send('Not Registered user')}
         else{
             const passwordIsValid = bcrypt.compareSync(req.body.password, user.password)
@@ -38,8 +40,22 @@ router.post('/login',(req,res) => {
             var token = jwt.sign({id:user._id},config.secret,{
                 expiresIn:86400
             })
-            res.status(200).send({auth:true,token:token})
-        }
+            localStorage.setItem('authtoken',token)
+            res.redirect('/user/profile')
+            // res.status(200).send({auth:true,token:token})
+        }            
+    })
+})
+
+router.get('/userinfo',(req,res) => {
+    var token = req.headers['x-access-token'];
+    if(!token) res.status(401).send({auth:false, message:'NO Token Found'})
+    jwt.verify(token, config.secret,(err,decode) => {
+        if(err) return ress.status(500).send({auth:false,token:'fail to validate'})
+        User.findById(decode.id,{password:0},(err,user) => {
+            if(err) return res.status(404).send('User Not Found')
+            res.send(user)
+        })
     })
 })
 
