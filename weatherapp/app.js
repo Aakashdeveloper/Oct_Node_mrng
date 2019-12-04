@@ -32,3 +32,18 @@ app.listen(port,(err)=>{
     if(err) throw err;
     console.log('Api call is running')
 })
+
+
+class App extends Component {
+    render() {
+      return (
+        <ApolloProvider client={client}>
+          <Router>
+            <div className="container">
+              <h1>Apollo-Graphql</h1>
+            </div>
+          </Router>
+        </ApolloProvider>
+      );
+    }
+  }
